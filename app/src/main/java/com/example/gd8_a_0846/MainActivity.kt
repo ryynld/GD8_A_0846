@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                     val jsonObjectLoc = jsonObjectGeo.getJSONObject("location")
                     modelMain.latloc = jsonObjectLoc.getDouble("lat")
                     modelMain.longloc = jsonObjectLoc.getDouble("lng")
+                    modelMainList.add(modelMain)
                 }
                 initMarker(modelMainList)
             } catch (e: JSONException) {
